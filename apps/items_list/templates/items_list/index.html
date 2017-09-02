@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Surprise Me!</title>
+</head>
+<body>
+    <h1>Surprise Me!</h1>
+    <form action="/list" method="post">
+    {% csrf_token %}
+    <label for="number">Pick a number:</label>
+    <input type="text" name="number">
+    <input type="submit" value="Ready">
+    </form>
+    <p>{{ error }}</p>
+</body>
+</html>
